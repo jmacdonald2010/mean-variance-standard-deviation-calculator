@@ -2,7 +2,7 @@ import numpy as np
 
 def calculate(list):
     if len(list) != 9:
-        return "List must contain nine numbers."
+        raise ValueError('List must contain nine numbers.')
     input_array = np.array([[list[0], list[1], list[2]], [list[3], list[4], list[5]], [list[6], list[7], list[8]]])
     calculations = dict()
     print(input_array)
@@ -45,6 +45,7 @@ def calculate(list):
 
     return calculations
 
+# this code below is for testing the function, and what the dict should look like when outputting data
 # test calculations
 print(calculate([0,1,2,3,4,5,6,7,8]))
 # should return:
